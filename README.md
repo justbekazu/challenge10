@@ -14,7 +14,7 @@ This is a roster generator based in Node JS. This application was built using th
   
 *  From this file, the user will be able to launch to the web.
 
-* From this website, the user will be able to click on various links to access the profile's email address and github account.
+* From this website, the user will be able to click on various links to access the profile"s email address and github account.
 
  ## Additional resources
 
