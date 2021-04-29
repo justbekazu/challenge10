@@ -4,56 +4,115 @@ const http = require("http");
 const engineer = require("../employees/engineer");
 const intern = require("../employees/intern");
 const Choices = require("inquirer/lib/objects/choices");
+const startApp = require("../user");
 
-function Employee(managerName, employeeId, emailAddress, officeNumber) {
+function Employee(managerName, employeeIdManager, emailAddressManager, officeNumber) {
     this.managerName = managerName;
-    this.employeeId = employeeId;
-    this.emailAddress = emailAddress;
+    this.employeeId = employeeIdManager;
+    this.emailAddress = emailAddressManager;
     this.officeNumber = officeNumber;
 }
-
-const employeeArray = ["engineer", "intern"]
 
 inquirer
 .prompt([
 {
   type: "text",
   name: "managerName",
-  message: "What is your manager's name?"
-},
+  message: "What is your manager's name?",
+  validate: managerName => {
+    if (managerName) {
+        return true;
+      }
+      else {
+        console.log("Please enter your name!");
+       return false;
+    }
+    }
+    },
+  
 
 {
 type: "text",
-name: "employeeId",
-message: "What is your emoployee ID?"
-},
+name: "employeeIdManager",
+message: "What is their emoployee ID?",
+validate: employeeIdManager => {
+    if (employeeIdManager) {
+        return true;
+      }
+      else {
+        console.log("Please enter their employee id!");
+       return false;
+    }
+    }
+    },
+
 
 {
 type: "text",
-name: "emailAddress",
-message: "What is your email address?"
+name: "emailAddressManager",
+message: "What is their email address?",
+validate: emailAddressManager => {
+if (emailAddressManager) {
+    return true;
+  }
+  else {
+    console.log("Please enter their email address!");
+   return false;
+}
+}
 },
+
 
 {
 type: "text",
 name: "officeNumber",
-message: "What is your office number?"
-},
+message: "What is their office number?",
+validate: officeNumber => {
+    if (officeNumber) {
+        return true;
+      }
+      else {
+        console.log("Please enter their office number!");
+       return false;
+    }
+    }
+    },
+
 
 {
-type: "checkbox",    
+type: "list",    
 name: "typeOfEmployment",
 message: "Please select your type of employment",
-choices: employeeArray
-},
+choices: ["engineer", "intern"],
+validate: (emailAddressManager) => {
+    if (emailAddressManager) {
+        return true;
+      }
+      else {
+        console.log("Please enter your email address!");
+       return false;
+    }
+    }
+    },
+
 
 
 
 {
-name: "addAnother",
 type: "confirm",
-message: "Would you like to add another employee?"
-}
+name: "addAnother",
+message: "Would you like to add another employee?",
+validate: addAnother => {
+    if (addAnother) {
+        startApp();
+      }
+      else {
+        console.log("let's see the HTML");
+       return false;
+    }
+    }
+    },
+
 ])
 
 .then((answer) => {

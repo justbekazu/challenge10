@@ -1,3 +1,3 @@
-const Employee = require("./employees/Employee");
-
-this.startApp()
+// const Employee = require("./employees/Employee");
+// console.log(this)
+// this.startApp()

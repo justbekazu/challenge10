@@ -89,7 +89,7 @@ const startApp = function() {
     return promptProject(portfolioData);
   } else {
     return portfolioData;
-  }
+  }})
 
     
 
