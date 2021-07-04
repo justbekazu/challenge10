@@ -1,0 +1,153 @@
+/* ---- GENERAL ---- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---- 'OUR TEAM' HEADING ---- */
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 200;
+  font-size: 50px;
+}
+
+#team-span {
+  font-weight: 500;
+}
+
+/* ---- MAIN ---- */
+
+main {
+  width: fit-content;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+/* Profile cards */
+.card {
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px;
+  border-radius: 20px;
+  width: 220px;
+  height: fit-content;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.card h3 {
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+}
+
+.card p {
+  margin-top: 0;
+}
+
+.card-top {
+  color: white;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  padding: 10px;
+}
+
+.card-bottom {
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  padding: 10px;
+}
+
+.manager {
+  border: solid 3px rgb(16, 136, 242);
+}
+
+.engineer {
+  border: solid 3px rgb(237, 164, 5);
+}
+
+.intern {
+  border: solid 3px rgb(35, 150, 129);
+}
+
+.engineer .card-top {
+  background: rgb(237, 164, 5);
+}
+
+.manager .card-top {
+  background: rgb(16, 136, 242);
+}
+
+.intern .card-top {
+  background: rgb(35, 150, 129);
+}
+
+.card-bottom a {
+  text-decoration: none;
+  color: rgb(48, 131, 233);
+}
+
+.card-bottom a:hover {
+  color: rgb(2, 74, 162);
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+@media (max-width: 1083px) {
+  main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+    font-size: 11px;
+  }
+
+  .flex-container {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .card h2 {
+    font-size: 14px;
+  }
+
+  .card-top {
+    display: inline-block;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: 120px;
+  }
+
+  .card-bottom {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+  }
+
+  .card-bottom p {
+    margin: 0;
+  }
+}

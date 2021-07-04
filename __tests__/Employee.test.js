@@ -1,20 +1,37 @@
-const User = require("../employees/Employee");
+const Employee = require("../lib/Employee");
+const employee = new Employee("Bob", 1, "bob@work.com");
 
-test("create a Employee object",() => {
+describe("Employee class", () => {
+  it("new Employee instance has 3 properties", () => {
+    const employeeProperties = Object.keys(employee);
+    expect(employeeProperties.length).toEqual(3);
+  });
 
-const number = 4
-expect(number).toBe(4)
+  describe("getName()", () => {
+    it("returns Employee name", () => {
+      const employeeName = employee.getName();
+      expect(employeeName).toEqual("Bob");
+    });
+  });
 
-//  const Employee = function() {}
+  describe("getId()", () => {
+    it("returns Employee ID", () => {
+      const employeeId = employee.getId();
+      expect(employeeId).toEqual(1);
+    });
+  });
+
+  describe("getEmail()", () => {
+    it("returns Employee email", () => {
+      const employeeEmail = employee.getEmail();
+      expect(employeeEmail).toEqual("bob@work.com");
+    });
+  });
+
+  describe("getRole()", () => {
+    it("returns the string 'Employee'", () => {
+      const role = employee.getRole();
+      expect(role).toEqual("Employee");
+    });
+  });
 });
-
-// test("create a startApp function",() => {
-//     const startApp = function() {}
-//   });
-
-// test("create a addAnother function",() => {
-//     const addAnother = function() {}
-//   });
-
-
-

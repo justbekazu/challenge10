@@ -13,8 +13,7 @@ function Employee(managerName, employeeIdManager, emailAddressManager, officeNum
     this.officeNumber = officeNumber;
 }
 
-inquirer
-.prompt([
+const employeeManager = inquirer.prompt([
 {
   type: "text",
   name: "managerName",
