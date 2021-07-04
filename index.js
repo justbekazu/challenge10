@@ -10,11 +10,10 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 const team = [[], [], []];
 
-// Runs next function according to inquirer prompt menu selection
 let menuPick = "";
 function nextPrompt() {
   switch (menuPick) {
-    case "Add an" + chalk.bold(" ENGINEER") + " to my team":
+    case "Add an" + " ENGINEER" + " to my team":
       engineerInfo();
       break;
     case "Add an" + " INTERN" + " to my team":
@@ -25,7 +24,7 @@ function nextPrompt() {
       break;
     case "Add another" + " INTERN" + " to my team":
       internInfo();
-    //break;
+
     default:
       writeFileAsync("./dist/profile.html", generateHTML(team)).then(() =>
         console
@@ -76,7 +75,7 @@ const managerInfo = () => {
       {
         type: "input",
         name: "managerName",
-        message: "Team manager " + "name" + " (1-25 characters):",
+        message: "Team manager " + "name" + " (1-20 characters):",
         validate: validateName,
       },
       {
@@ -168,7 +167,7 @@ const engineerInfo = () => {
             name: "Add an" + " INTERN" + " to my team",
           },
           {
-            name: "My team is complete",
+            name: "Finished",
           },
         ],
       },
@@ -225,7 +224,7 @@ const internInfo = () => {
             name: "Add another" + " INTERN" + " to my team",
           },
           {
-            name: "My team is complete",
+            name: "Finished",
           },
         ],
       },

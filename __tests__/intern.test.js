@@ -1,10 +1,5 @@
 const Intern = require("../lib/Intern");
-const intern = new Intern(
-  "Laura",
-  4,
-  "laura@work.com",
-  "The University of Sydney"
-);
+const intern = new Intern("rudolf", 4, "rednose@workshop.com", "Snow U");
 
 describe("Intern class", () => {
   it("new Intern instance has 4 properties", () => {
@@ -15,7 +10,7 @@ describe("Intern class", () => {
   describe("getName()", () => {
     it("returns Intern name", () => {
       const internName = intern.getName();
-      expect(internName).toEqual("Laura");
+      expect(internName).toEqual("rudolf");
     });
   });
 
@@ -29,14 +24,14 @@ describe("Intern class", () => {
   describe("getEmail()", () => {
     it("returns Intern email", () => {
       const internEmail = intern.getEmail();
-      expect(internEmail).toEqual("laura@work.com");
+      expect(internEmail).toEqual("rednose@workshop.com");
     });
   });
 
   describe("getSchool()", () => {
     it("returns Intern school", () => {
       const internSchool = intern.getSchool();
-      expect(internSchool).toEqual("The University of Sydney");
+      expect(internSchool).toEqual("Snow U");
     });
   });
 

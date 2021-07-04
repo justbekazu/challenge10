@@ -1,5 +1,5 @@
 const Engineer = require("../lib/Engineer");
-const engineer = new Engineer("Greg", 3, "greg@work.com", "greghub");
+const engineer = new Engineer("Bob", 15, "bob@bobsburger.com", "burgerhub");
 
 describe("Engineer class", () => {
   it("new Engineer instance has 4 properties", () => {
@@ -10,28 +10,28 @@ describe("Engineer class", () => {
   describe("getName()", () => {
     it("returns Engineer name", () => {
       const engineerName = engineer.getName();
-      expect(engineerName).toEqual("Greg");
+      expect(engineerName).toEqual("Bob");
     });
   });
 
   describe("getId()", () => {
     it("returns Engineer ID", () => {
       const engineerId = engineer.getId();
-      expect(engineerId).toEqual(3);
+      expect(engineerId).toEqual(15);
     });
   });
 
   describe("getEmail()", () => {
     it("returns Engineer email", () => {
       const engineerEmail = engineer.getEmail();
-      expect(engineerEmail).toEqual("greg@work.com");
+      expect(engineerEmail).toEqual("bob@bobsburger.com");
     });
   });
 
   describe("getGithub()", () => {
     it("returns Engineer GitHub username", () => {
       const engineerGithub = engineer.getGithub();
-      expect(engineerGithub).toEqual("greghub");
+      expect(engineerGithub).toEqual("burgerhub");
     });
   });
 

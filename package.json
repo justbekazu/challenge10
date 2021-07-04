@@ -4,7 +4,7 @@
   "description": "a program that allows users to input profiles",
   "main": "app.js",
   "scripts": {
-    "test": "jest", 
+    "test": "jest",
     "start": "index.js"
   },
   "repository": {

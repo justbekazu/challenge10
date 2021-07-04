@@ -1,5 +1,5 @@
 const Employee = require("../lib/Employee");
-const employee = new Employee("Bob", 1, "bob@work.com");
+const employee = new Employee("Henry", 4, "john.henry@railroad.com");
 
 describe("Employee class", () => {
   it("new Employee instance has 3 properties", () => {
@@ -10,21 +10,21 @@ describe("Employee class", () => {
   describe("getName()", () => {
     it("returns Employee name", () => {
       const employeeName = employee.getName();
-      expect(employeeName).toEqual("Bob");
+      expect(employeeName).toEqual("Henry");
     });
   });
 
   describe("getId()", () => {
     it("returns Employee ID", () => {
       const employeeId = employee.getId();
-      expect(employeeId).toEqual(1);
+      expect(employeeId).toEqual(4);
     });
   });
 
   describe("getEmail()", () => {
     it("returns Employee email", () => {
       const employeeEmail = employee.getEmail();
-      expect(employeeEmail).toEqual("bob@work.com");
+      expect(employeeEmail).toEqual("john.henry@railroad.com");
     });
   });
 

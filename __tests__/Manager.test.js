@@ -1,5 +1,5 @@
 const Manager = require("../lib/Manager");
-const manager = new Manager("Shirley", 2, "shirley@work.com", 1);
+const manager = new Manager("Burns", 100, "Mr@thermonucularacme.com", 5);
 
 describe("Manager class", () => {
   it("new Manager instance has 4 properties", () => {
@@ -10,21 +10,21 @@ describe("Manager class", () => {
   describe("getName()", () => {
     it("returns Manager name", () => {
       const managerName = manager.getName();
-      expect(managerName).toEqual("Shirley");
+      expect(managerName).toEqual("Burns");
     });
   });
 
   describe("getId()", () => {
     it("returns Manager ID", () => {
       const managerId = manager.getId();
-      expect(managerId).toEqual(2);
+      expect(managerId).toEqual(100);
     });
   });
 
   describe("getEmail()", () => {
     it("returns Manager email", () => {
       const managerEmail = manager.getEmail();
-      expect(managerEmail).toEqual("shirley@work.com");
+      expect(managerEmail).toEqual("Mr@thermonucularacme.com");
     });
   });
 
