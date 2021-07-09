@@ -35,12 +35,6 @@ function nextPrompt() {
   }
 }
 
-// function validateFirstName(firstName) {
-//   if (name.length <= 20 && name.length > 0) {
-//     return true;
-//   }
-//   return ("Must be between 1-20 characters (inclusive)");
-// }
 function validateName(name) {
   if (name.length <= 20 && name.length > 0) {
     return true;
@@ -99,8 +93,7 @@ const managerInfo = () => {
       {
         type: "list",
         name: "menu",
-        message:
-          "--------- Menu --------- \nChoose one of the following options:",
+        message: "--------- Menu --------- \nChoose one:",
         choices: [
           {
             name: "Add an" + " ENGINEER" + " to my team",
